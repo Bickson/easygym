@@ -1,0 +1,28 @@
+<h2 class="center">Workouts</h2>
+
+<table class="hoverable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @workouts.each do |wo| %>
+  <tr>
+    <td><%= wo.name %></td>
+    <td><%= wo.description %></td>
+    <td><%= link_to 'Show', wo, class: "waves-effect waves-light btn blue-grey darken-3"%></td>
+    <td><%= link_to 'Edit', edit_workout_path(wo), class: "waves-effect waves-light btn lime darken-3" %></td>
+    <td><%= link_to 'Destroy', wo, method: :delete, data: { confirm: 'Are you sure?' }, class: "waves-effect waves-light btn pink darken-3" %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Workout', new_workout_path, class: "btn cyan darken-3" %>

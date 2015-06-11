@@ -1,0 +1,43 @@
+<%= form_for(@workout) do |f| %>
+  <% if @workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+
+      <ul>
+      <% @workout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="row">
+  <div class="input-field col s6">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="input-field col s6">
+    <%= collection_select(:exercise, :id, @exercises, :id, :name, :prompt => 'Choose your exercise') %>
+    <label>Exercise</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s12">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "materialize-textarea" %>
+  </div>
+</div>
+
+<div class="waves-effect waves-light">
+    <%= f.submit "Add",class: "btn cyan darken-3" %>
+</div>
+<% end %>
+
+
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>
