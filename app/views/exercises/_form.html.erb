@@ -18,6 +18,22 @@
   </div>
 </div>
 
+
+<%= f.fields_for :cycles do |c| %>
+  <div class="row">
+    <div class="range-field col s6">
+      <%= c.label "Sets" %>
+      <%= c.range_field :sets, max: "5", min: "1" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="range-field col s6">
+      <%= c.label "Reps" %>
+      <%= c.range_field :reps, max: "20", min: "8" %>
+    </div>
+  </div>
+<% end %>
+
 <div class="row">
   <div class="input-field col s6">
     <%= f.label :picture %>

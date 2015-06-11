@@ -10,5 +10,36 @@
   <%= @workout.description %>
 </p>
 
+<table class="hoverable">
+  <thead>
+    <tr>
+      <th>Picture</th>
+      <th>Name</th>
+      <th>Sets x Reps</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @workout.exercises.each do |exercise| %>
+  <tr>
+    <td><i class="medium mdi-action-accessibility cyan darken-3 circle" style="color:white;"></i></td>
+    <td><%= exercise.name %></td>
+    <td><%#= exercise.cycles.first.sets %>x<%#= exercise.cycles.first.resps %></td>
+    <td><%= exercise.description %></td>
+    <td><%#= exercise.picture %></td>
+    <td><%= link_to 'Show', exercise, class: "waves-effect waves-light btn blue-grey darken-3" %></td>
+    <td><%= link_to 'Edit', edit_exercise_path(exercise), class: "waves-effect waves-light btn lime darken-3" %></td>
+    <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' }, class: "waves-effect waves-light btn pink darken-3" %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<br />
+
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', exercises_path %>

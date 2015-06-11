@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150610181023) do
+ActiveRecord::Schema.define(:version => 20150611113546) do
+
+  create_table "cycles", :force => true do |t|
+    t.integer  "reps"
+    t.integer  "exercise_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "sets"
+  end
 
   create_table "exercises", :force => true do |t|
     t.string   "name"

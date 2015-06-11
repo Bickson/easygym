@@ -25,6 +25,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/new.json
   def new
     @exercise = Exercise.new
+    @exercise.cycles.build
 
     respond_to do |format|
       format.html # new.html.erb

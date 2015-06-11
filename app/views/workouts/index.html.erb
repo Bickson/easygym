@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Nr of exercises</th>
       <th>Description</th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
 <% @workouts.each do |wo| %>
   <tr>
     <td><%= wo.name %></td>
+    <td><%= wo.exercises.count %>
     <td><%= wo.description %></td>
     <td><%= link_to 'Show', wo, class: "waves-effect waves-light btn blue-grey darken-3"%></td>
     <td><%= link_to 'Edit', edit_workout_path(wo), class: "waves-effect waves-light btn lime darken-3" %></td>
