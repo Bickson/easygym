@@ -1,6 +1,11 @@
 <!-- Dropdown Structure -->
 <ul id='dropdown1' class='dropdown-content' style="margin-top: 64px;">
   <li>
+    <%= link_to workout_sessions_path, style: "color: #00838f;" do %>
+      <span class="mdi-hardware-keyboard-arrow-right left"></span>My sessions
+    <%end%>
+  </li>
+  <li>
     <%= link_to workouts_path, style: "color: #00838f;" do %>
       <span class="mdi-hardware-keyboard-arrow-right left"></span>Workouts
     <%end%>
@@ -28,9 +33,9 @@
         </div>
       <% end %>
       <ul id="nav-mobile" class="right">
-        <li>
-          <a class='dropdown-button' href='#' data-activates='dropdown1' style="padding-right:30px;">
-            <i class="mdi-navigation-menu right"></i>Menu
+        <li class="right">
+          <a class='dropdown-button' href='#' data-activates='dropdown1' style="width:200px;">
+            <i class="mdi-navigation-menu left"></i>
           </a>
         </li>
       </ul>

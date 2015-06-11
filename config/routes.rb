@@ -2,6 +2,7 @@ EasyGym::Application.routes.draw do
 
   get "home/index"
 
+  resources :workout_sessions
   resources :statistics, only: [:index]
   resources :workouts
   resources :exercises
