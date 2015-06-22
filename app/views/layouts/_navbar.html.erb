@@ -1,5 +1,11 @@
 <!-- Dropdown Structure -->
+<% if user_signed_in? %>
 <ul id='dropdown1' class='dropdown-content' style="margin-top: 64px;">
+  <li>
+    <%= link_to profile_path(current_user), style: "color: #00838f;" do %>
+      <span class="mdi-hardware-keyboard-arrow-right left"></span>Profile
+    <%end%>
+  </li>
   <li>
     <%= link_to workout_sessions_path, style: "color: #00838f;" do %>
       <span class="mdi-hardware-keyboard-arrow-right left"></span>My sessions
@@ -22,6 +28,7 @@
     <%end%>
   </li>
 </ul>
+<% end %>
 
 <!-- Navbar -->
 <div class="navbar-fixed">

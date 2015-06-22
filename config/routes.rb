@@ -1,5 +1,6 @@
 EasyGym::Application.routes.draw do
 
+  get "profile/:id",to: "users#profile", as: "profile", path_names: { profile: 'kalle' }
   devise_for :users
 
   get "home/index"
