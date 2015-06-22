@@ -17,10 +17,9 @@
 
 <%= render 'layouts/navbar' %>
 
-
 <!-- put this notice in modal -->
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<%= notice %>
+<%= alert %>
 
 <% if current_page?('/')%>
   <%= yield %>
@@ -37,5 +36,7 @@
 <script>
 $(document).ready(function() {
   $('select').material_select();
+
+  $('.modal-trigger').leanModal();
 });
 </script>

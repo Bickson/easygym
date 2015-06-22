@@ -1,7 +1,7 @@
   <div class="parallax-container" style="width:100%;">
     <div class="parallax"><%=image_tag "img7.png", style: "width: 100%;"%></div>
   </div>
-  <div class="section white">
+  <div class="section white z-depth-2">
     <div class="row container center">
       <div class="col s4 ">
         <i class="large mdi-av-playlist-add" style="color:#00838f;"></i>
@@ -23,10 +23,12 @@
   <div class="parallax-container">
     <div class="parallax"><%=image_tag "img6.png"%></div>
   </div>
-  <div class="section white center">
-    <div class="row container">
-      <h2 class="header">Sign up now jerkface</h2>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  <div class="section white center z-depth-2">
+    <div class="row container ">
+      <h2 class="header">Sign up now</h2>
+      <p class="grey-text text-darken-3 lighten-3">
+        <%= render 'home/signup_form' %>
+      </p>
     </div>
   </div>
   <div class="parallax-container">
