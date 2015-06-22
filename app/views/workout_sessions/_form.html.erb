@@ -1,0 +1,25 @@
+<%= form_for(@workout_session) do |f| %>
+
+<div class="row">
+  <div class="datepicker col s6">
+    <%= f.label :performed_at %>
+    <%= f.text_field :performed_at, type: "date", class: "datepicker" %>
+  </div>
+  <div class="input-field col s6">
+    <%= f.collection_select :workout_id , Workout.all, :id, :name, :prompt => 'Choose your workout'%>
+    <label>Exercise</label>
+  </div>
+</div>
+
+
+<div class="waves-effect waves-light">
+    <%= f.submit "Add",class: "btn cyan darken-3" %>
+</div>
+<% end %>
+
+<script>
+$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+</script>
