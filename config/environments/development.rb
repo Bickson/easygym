@@ -34,4 +34,7 @@ EasyGym::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #Use react in this application
+  #config.react.variant = :development
 end
