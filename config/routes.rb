@@ -1,11 +1,16 @@
 EasyGym::Application.routes.draw do
 
+  devise_for :users
+
   get "home/index"
+
 
   resources :workout_sessions
   resources :statistics, only: [:index]
-  resources :workouts
-  resources :exercises
+  #namespce :settings do
+    resources :workouts
+    resources :exercises
+  #end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
