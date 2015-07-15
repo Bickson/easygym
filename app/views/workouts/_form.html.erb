@@ -21,9 +21,8 @@
     <%= collection_select(:exercise, :id, @exercises, :id, :name, :prompt => 'Choose your exercise') %>
     <label>Exercise</label>
     
-    <ul>
-      <li></li>
-    </ul>
+    <%= react_component 'Exercise', 
+      { exercise: @exercises.first.name} %>
   
   </div>
 </div>
