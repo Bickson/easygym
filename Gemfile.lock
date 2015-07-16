@@ -162,7 +162,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 3.2.18)
   react-rails (~> 1.0)
-  rspec-rails
+  rspec-rails (~> 3.0)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
