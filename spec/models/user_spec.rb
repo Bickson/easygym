@@ -2,11 +2,11 @@ require "rails_helper"
 
 describe User do
 	
-	let(:user) { User.new }
+	let(:user) { FactoryGirl.create (:user) }
 
 	context "Create a user" do
-		it "is invalid" do
-			expect(user).to_not be_valid
+		it "is valid" do
+			expect(user).to be_valid
 		end
 	end
 
