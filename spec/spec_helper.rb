@@ -43,6 +43,7 @@ RSpec.configure do |config|
   # Use the specified formatter
   config.formatter = :documentation # :progress, :html, :textmate
 
+  #config.include FactoryGirl::Syntax::Methods
   #config.formatter = :progress 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
